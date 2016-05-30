@@ -5,6 +5,7 @@
  *      Author: chester
  */
 #include <vector>
+#include <iostream>
 #include "Spell.h"
 using namespace std;
 
@@ -15,6 +16,7 @@ class Unit {
 public:
 	Unit(char *name,char *race,int lvl,int totalHp,int def,int totalMana);
 	virtual ~Unit();
+	void getInfo();
 private:
 	char *name;
 	char *race;
