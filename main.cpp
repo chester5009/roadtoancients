@@ -1,4 +1,7 @@
 #include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctime>
 #include "Unit.h"
 using namespace std;
 
@@ -29,14 +32,58 @@ void createHeroe() {
 		heroe->getInfo();
 	}
 
-
 }
 
 int main(int argc, char **argv) {
 	setlocale(LC_ALL, "Russian");
 	cout << "Добро пожаловать в игру Road to ancients" << endl;
 	cout << "Создание персонажа.." << endl;
+
 	createHeroe();
+	bool isGame = true;
+
+	while (isGame) {
+		system("clear");
+		int action = 0;
+		do {
+			cout << "Выберите пункт.." << endl;
+			cout << "1. Передвигаться" << endl;
+			cout << "2. Прокачать" << endl;
+			cout << "3. Выход" << endl;
+
+			scanf("%d", &action);
+			//printf("action %d", action);
+
+		} while (action < 1 && action > 3);
+
+		if (action == 1) {
+
+		} else if (action == 2) {
+
+		} else if (action == 3) {
+
+			isGame = false;
+		}
+
+	}
+	int x = 3;
+	double timer = clock();
+	while (x > 0) {
+
+		if (clock() > (timer + CLOCKS_PER_SEC)) {
+			timer = clock();
+			//cout << x <<" "<<CLOCKS_PER_SEC<< endl;
+			system("clear");
+			cout << "Выход из игры" << endl;
+			printf("через %d\n", x);
+
+			//printf("\n");
+			x--;
+		}
+
+	}
+	printf("\n");
+	exit(0);
 
 }
 
